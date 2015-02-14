@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import java.util.List;
 
 
 public class CautaBon extends Activity {
@@ -12,6 +17,18 @@ public class CautaBon extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cauta_bon);
+    }
+
+    public void cautaBon(View v){
+        TextView notifiacationCauta = (TextView) findViewById(R.id.textViewCautaBon);
+        EditText dataEdit   = (EditText)findViewById(R.id.dataCautaBon);
+        EditText sumaEdit   = (EditText)findViewById(R.id.cautaSuma);
+        ServiciuBD db = new ServiciuBD(this);
+        List<Bon> bonuri = db.Cauta_Bon(dataEdit.getText().toString(), sumaEdit.getText().toString());
+        if (bonuri.size() > 0)
+            notifiacationCauta.setText("Felicitari, ai un bon cu aceste date!");
+        else
+            notifiacationCauta.setText("Din pacate nu ai un asemenea bon! :(");
     }
 
 

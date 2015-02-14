@@ -12,6 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ServiciuBD extends SQLiteOpenHelper {
 
@@ -125,6 +126,32 @@ public class ServiciuBD extends SQLiteOpenHelper {
 
         return contact_list;
     }
+
+    // Updating single contact
+    public List<Bon> Cauta_Bon(String suma, String data) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        //TODO solve this SQL injection
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_BONURI + " WHERE " + KEY_DATA + "='" + data + "' and " + KEY_SUMA + "='" + suma + "'", null);
+        List<Bon> result = new ArrayList<Bon>();
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Bon contact = new Bon();
+                contact.setID(Integer.parseInt(cursor.getString(0)));
+                contact.setSeria(cursor.getString(1));
+                contact.setData(cursor.getString(2));
+                contact.setSuma(cursor.getString(3));
+                // Adding contact to list
+                result.add(contact);
+            } while (cursor.moveToNext());
+        }
+
+        // return contact list
+        cursor.close();
+        db.close();
+        return result;
+    }
+
 
     // Updating single contact
     public int Update_Bon(Bon contact) {

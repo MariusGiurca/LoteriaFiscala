@@ -22,9 +22,6 @@ public class MainActivity extends Activity {
 
         setContentView(R.layout.activity_main);
         ServiciuBD db = new ServiciuBD(this);
-        Log.v(TAG, "It works");
-        Bon b = new Bon("MERE231432414321", "3/3/2015", "23.3");
-        db.Add_Bon(b);
         List<Bon> bonuri = db.Get_Bonuri();
 
         Log.v(TAG, bonuri.toString());
