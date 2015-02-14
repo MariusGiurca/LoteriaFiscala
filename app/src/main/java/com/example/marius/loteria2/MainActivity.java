@@ -1,19 +1,33 @@
 package com.example.marius.loteria2;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.List;
+
 public class MainActivity extends Activity {
+
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        ServiciuBD db = new ServiciuBD(this);
+        Log.v(TAG, "It works");
+        Bon b = new Bon("MERE231432414321", "3/3/2015", "23.3");
+        db.Add_Bon(b);
+        List<Bon> bonuri = db.Get_Bonuri();
+
+        Log.v(TAG, bonuri.toString());
     }
 
     public void goToAdaugaBonActivity(View v)
