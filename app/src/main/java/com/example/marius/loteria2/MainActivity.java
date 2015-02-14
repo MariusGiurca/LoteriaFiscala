@@ -32,19 +32,19 @@ public class MainActivity extends Activity {
 
     public void goToAdaugaBonActivity(View v)
     {
-        Button adaugaBon = (Button) v;
+//        Button adaugaBon = (Button) v;
         startActivity(new Intent(getApplicationContext(),AdaugaBon.class));
     }
 
     public void goToCautaBonActivity(View v)
     {
-        Button cautaBon = (Button) v;
+//        Button cautaBon = (Button) v;
         startActivity(new Intent(getApplicationContext(),CautaBon.class));
     }
 
     public void goToAfiseazaBonActivity(View v)
     {
-        Button afiseazaBon = (Button) v;
+//        Button afiseazaBon = (Button) v;
         startActivity(new Intent(getApplicationContext(),AfiseazaBon.class));
     }
 

@@ -30,9 +30,8 @@ public class AdaugaBon extends Activity {
         EditText codEdit   = (EditText)findViewById(R.id.editTextCodBon);
         Bon b = new Bon(codEdit.getText().toString(), dataEdit.getText().toString(), sumaEdit.getText().toString());
         ServiciuBD db = new ServiciuBD(this);
-        Bon b = new Bon("MERE231432414321", "3/3/2015", "23.3");
         db.Add_Bon(b);
-        notificationAdd.setText("Bonul " + b + " a fost adaugat cu succes");
+        notificationAdd.setText("Bonul " + b + " a fost adaugat cu succes. Acum sunt " + db.Get_Bonuri().size() + " bonuri!");
 
     }
 

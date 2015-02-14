@@ -6,7 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import java.util.List;
 
 
 public class AfiseazaBon extends Activity {
@@ -15,12 +20,22 @@ public class AfiseazaBon extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afiseaza_bon);
+
+        ListView lista = (ListView) findViewById(R.id.listaBonuri);
+        ServiciuBD db = new ServiciuBD(this);
+        List<Bon> bonuri = db.Get_Bonuri();
+        ArrayAdapter<Bon> adapter = new ArrayAdapter<Bon>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, bonuri);
+
+
+        // Assign adapter to ListView
+        lista.setAdapter(adapter);
     }
 
     public void goToAdaugaBonActivity(View v)
     {
-        Button cautaBon = (Button) v;
-        //startActivity(new Intent(getApplicationContext(),AdaugaBon.class));
+//        Button cautaBon = (Button) v;
+        startActivity(new Intent(getApplicationContext(),AdaugaBon.class));
     }
 
     @Override
