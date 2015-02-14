@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.marius.loteria2.AdaugaBon"
+    android:onClick="adaugaBon">
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:id="@+id/editTextSumaBon"
+        android:hint="Suma bon"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editTextCodBon"
+        android:layout_alignStart="@+id/editTextCodBon" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editTextDate"
+        android:hint="Data Bon"
+        android:layout_below="@+id/editTextSumaBon"
+        android:layout_alignLeft="@+id/editTextSumaBon"
+        android:layout_alignStart="@+id/editTextSumaBon" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:id="@+id/editTextCodBon"
+        android:layout_below="@+id/editTextDate"
+        android:layout_centerHorizontal="true"
+        android:hint="Cod Bon" />
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="Adauga Bon"
+        android:id="@+id/adaugaBonActivityAdauga"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="adaugaBon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewAdaugaBon"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="139dp" />
+
+</RelativeLayout>
