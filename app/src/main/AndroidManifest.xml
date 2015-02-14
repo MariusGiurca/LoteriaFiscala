@@ -18,15 +18,15 @@
         </activity>
         <activity
             android:name=".AdaugaBon"
-            android:label="@string/title_activity_adauga_bon" >
+            android:label="Adauga Bon" >
         </activity>
         <activity
             android:name=".CautaBon"
-            android:label="@string/title_activity_cauta_bon" >
+            android:label="Cauta Bon" >
         </activity>
         <activity
             android:name=".AfiseazaBon"
-            android:label="@string/title_activity_afiseaza_bon" >
+            android:label="Afiseaza Bonuri" >
         </activity>
     </application>
 
