@@ -11,6 +11,7 @@
         android:layout_height="50dp"
         android:id="@+id/cautaSuma"
         android:hint="Suma bon"
+        android:inputType="number"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/cautaSuma"
@@ -25,7 +26,9 @@
         android:hint="Data Bon"
         android:layout_below="@+id/cautaSuma"
         android:layout_alignLeft="@+id/cautaSuma"
-        android:layout_alignStart="@+id/cautaSuma"/>
+        android:layout_alignStart="@+id/cautaSuma"
+        android:focusable="false"
+        android:onClick="edtiDataClickCauta" />
 
     <Button
         android:layout_width="220dp"

@@ -30,7 +30,7 @@
     <Button
         android:layout_width="180dp"
         android:layout_height="50dp"
-        android:text="Afiseaza bonuri"
+        android:text="Afiseaza Bonuri"
         android:id="@+id/afiseazaBon"
         android:layout_below="@+id/cautaBon"
         android:layout_centerHorizontal="true"
