@@ -28,6 +28,10 @@
             android:name=".AfiseazaBon"
             android:label="Afiseaza Bonuri" >
         </activity>
+        <activity
+            android:name=".RegulamentOficial"
+            android:label="@string/title_activity_regulament_oficial" >
+        </activity>
     </application>
 
 </manifest>

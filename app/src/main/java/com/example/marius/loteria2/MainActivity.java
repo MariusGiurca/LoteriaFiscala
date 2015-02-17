@@ -45,6 +45,11 @@ public class MainActivity extends Activity {
         startActivity(new Intent(getApplicationContext(),AfiseazaBon.class));
     }
 
+    public void goToRegulamentOfical(View v)
+    {
+        startActivity(new Intent(getApplicationContext(),RegulamentOficial.class));
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
