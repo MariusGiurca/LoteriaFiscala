@@ -34,7 +34,7 @@ public class CautaBon extends Activity {
 
         EditText sumaEdit   = (EditText)findViewById(R.id.cautaSuma);
         ServiciuBD db = new ServiciuBD(this);
-        List<Bon> bonuri = db.Cauta_Bon(dataEdit.getText().toString(), sumaEdit.getText().toString());
+        List<Bon> bonuri = db.Cauta_Bon(sumaEdit.getText().toString(), dataEdit.getText().toString());
         if (bonuri.size() > 0)
             notifiacationCauta.setText("Felicitari, ai un bon cu aceste date!");
         else
