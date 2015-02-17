@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.marius.loteria2.CautaBon"
+    android:background="@drawable/bonuri">
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:id="@+id/cautaSuma"
+        android:hint="Suma bon"
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/cautaSuma"
+        android:layout_alignStart="@+id/cautaSuma" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/dataCautaBon"
+        android:hint="Data Bon"
+        android:layout_below="@+id/cautaSuma"
+        android:layout_alignLeft="@+id/cautaSuma"
+        android:layout_alignStart="@+id/cautaSuma"
+        android:focusable="false"
+        android:onClick="edtiDataClickCauta" />
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="Cauta Bon"
+        android:id="@+id/cautaBonActivityCauta"
+        android:layout_below="@+id/dataCautaBon"
+        android:layout_centerHorizontal="true"
+        android:onClick="cautaBon"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCautaBon"
+        android:layout_below="@+id/cautaBonActivityCauta"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="139dp"
+        android:background="#ff031634"
+        android:textColor="#E8DDCB"
+        android:textAlignment="center" />
+
+
+
+</RelativeLayout>
