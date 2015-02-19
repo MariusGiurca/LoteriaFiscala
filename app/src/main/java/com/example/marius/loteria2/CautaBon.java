@@ -2,6 +2,7 @@ package com.example.marius.loteria2;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -75,7 +76,7 @@ public class CautaBon extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            startActivity(new Intent(getApplicationContext(),Despre.class));
         }
 
         return super.onOptionsItemSelected(item);

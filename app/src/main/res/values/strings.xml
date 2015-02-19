@@ -8,5 +8,6 @@
     <string name="title_activity_cauta_bon">CautaBon</string>
     <string name="title_activity_afiseaza_bon">AfiseazaBon</string>
     <string name="title_activity_regulament_oficial">RegulamentOficial</string>
+    <string name="title_activity_despre">Despre</string>
 
 </resources>

@@ -32,6 +32,10 @@
             android:name=".RegulamentOficial"
             android:label="@string/title_activity_regulament_oficial" >
         </activity>
+        <activity
+            android:name=".Despre"
+            android:label="@string/title_activity_despre" >
+        </activity>
     </application>
 
 </manifest>

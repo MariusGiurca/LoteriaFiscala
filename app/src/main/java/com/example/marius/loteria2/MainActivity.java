@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            startActivity(new Intent(getApplicationContext(),Despre.class));
         }
 
         return super.onOptionsItemSelected(item);

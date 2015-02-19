@@ -1,6 +1,7 @@
 package com.example.marius.loteria2;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
@@ -134,7 +135,7 @@ public class RegulamentOficial extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            startActivity(new Intent(getApplicationContext(),Despre.class));
         }
 
         return super.onOptionsItemSelected(item);
