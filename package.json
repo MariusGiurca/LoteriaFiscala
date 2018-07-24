@@ -1,0 +1,8 @@
+{
+  "name": "test-loteria-fiscala",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "semver": "5.5.0"
+  }
+}
